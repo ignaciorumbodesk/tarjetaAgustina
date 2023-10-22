@@ -9,6 +9,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
+    <div class="botonEntrada">
+        <button id="playButton" onclick="cerrarModal" class="playButton modal-content">
+            <audio src="./mp3/RoyOrbison-PrettyWoman.mp3" type="audio/mpeg" id="miAudio" class="playerStyle"></audio>
+        </button>
+    </div>
     <main class="container bg">
         <header>
             <span class="names" >
@@ -32,7 +37,9 @@
            <article><img onclick="irALocalizacion()" class="button btnScale" src="./images/btn_ubication.png" alt="Lugar del evento"></article>
            <article><img onclick="regalos()" class="button btnScale" src="./images/boton_regalo.png" alt="Regalanos"></article>
            <article><img onclick="verOutfits()" class="button btnScale" src="./images/boton_percha.png" alt="Regalanos"></article>
-           <article><a href="https://api.whatsapp.com/send?phone=543884702245&text=Hola!.%20Confirmo%20mi%20asistencia%20al%20cumple!!"><img class="button btnScale" src="./images/btn_comment.png" alt="Confirma la asistencia por whatsapp"></a></article>
+           <article><a href="https://api.whatsapp.com/send?phone=543884702245&text=Hola!.%20Confirmo%20mi%20asistencia%20al%20cumple!!"><img class="button btnScale" src="./images/btn_comment.png" alt="Confirma la asistencia por whatsapp"></a>
+           </article>
+
            <section id="id-ctaregresiva" style="visibility: visible;">
             <p>Quedan:</p>
             <div id="cuenta">
@@ -63,7 +70,7 @@
                     <li>Accesorios para el pelo</li>
                     <li>Articulos skin care</li>
                 </ul>
-                <p>Talle pantalon: 42</p>
+                <p>Talle pantalon: 40</p>
                 <p>Talle remera: 2</p>
                 <p>Talle zapatos: 38</p>
                 <p>Nada en colores fluor ni mostaza.</p>
@@ -80,13 +87,16 @@
         </div>
         </div> 
     </main>
-    <audio autoplay>
-        <source src="./mp3/RoyOrbison-PrettyWoman.mp3" type="audio/mpeg">
-    </audio>
+<script>
+    var miAudio = document.querySelector('audio');
+window.addEventListener('touchstart', function audioStart() {
+    miAudio.play();
+  this.removeEventListener('touchstart', audioStart);
+});
+</script>
 <script src="simplyCountdown.js"></script>
 <script src="script.js "></script>
 <script src="reloj.js"></script>
-<script type="text/javascript" src="main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
 </body>

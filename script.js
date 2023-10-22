@@ -66,3 +66,20 @@ function confirmarAsistencia() {
     alert('Gracias por confirmar tu asistencia, ' + nombre + '!');
     cerrarModal();
 }
+
+
+
+
+//FUncion para reproducir audio
+var cancion = document.getElementById("miAudio");
+var playButton = document.getElementById("playButton");
+
+playButton.addEventListener("click", function () {
+    if (cancion.paused) {
+        cancion.play();
+        playButton.style.display = 'none';
+    } else {
+        cancion.pause();
+        playButton.innerHTML = "-";
+    }
+});
